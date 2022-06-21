@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            width: 14%;
+            height: 100px;
+            background-color: red;
+            display: inline-block;
+            
+        }
+        
+        .days :nth-child(2n+1){
+            background-color: silver;
+            text-align: center;
+            height: 40px;
+            padding-top: 16px;
+            
+        }
+        /* 월 수 금 일 은색 */
+        .days :nth-child(2n){
+            background-color: gold;
+            text-align: center;
+            height: 40px;
+            padding-top: 16px;
+        }
+        /* 화 목 토 금색 */
+
+        .hollow {
+            background-color: #fff;
+        }
+        /* 1일 이전에 있는거 흰색처리 */
+       #posco {
+        background-color: rgb(45, 45, 233);
+       }
+       .eeeee4{
+        background-color: #eeeee4;
+       }
+       .f5dbbb{
+        background-color: #f5dbbb;
+       }
+       .bbe2f5{
+        background-color: #bbe2f5;
+       }
+       .c84caec{
+        background-color: #84caec;
+       }
+       .ea9c76{
+        background-color: #ea9c76;
+       }
+       
+       #posco::after{
+        content: "포스코";
+        margin-left: 35px;
+       }
+
+    </style>
+</head>
+<body>
+    <div class="days">
+        <span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span><span>일</span>
+
+    </div>
+    <div class="week1">
+        <span class="hollow">&nbsp;</span><span class="hollow">&nbsp;</span><span class="hollow">&nbsp;</span><span class="hollow">&nbsp;</span><span id="posco">1</span><span class="eeeee4">2</span><span class="f5dbbb">3</span>
+        
+    </div>
+    <div class="week2">
+        <span class="bbe2f5">4</span><span class="c84caec">5</span><span  class="bbe2f5">6</span><span class="c84caec">7</span><span  class="bbe2f5">8</span><span class="c84caec">9</span><span class="ea9c76">10</span>
+        
+    </div>
+    <div class="week3">
+        <span  class="bbe2f5">11</span><span class="eeeee4">12</span><span class="bbe2f5">13</span><span class="eeeee4">14</span><span  class="bbe2f5">15</span><span class="eeeee4">16</span><span class="f5dbbb">17</span>
+        
+    </div>
+    <div class="week4">
+        <span class="bbe2f5" >18</span><span class="c84caec">19</span><span  class="bbe2f5">20</span><span class="c84caec">21</span><span  class="bbe2f5">22</span><span class="c84caec">23</span><span class="ea9c76">24</span>
+        
+    </div>
+    <div class="week5">
+        <span  class="bbe2f5">25</span><span class="eeeee4">26</span><span  class="bbe2f5">27</span><span class="eeeee4">28</span><span  class="bbe2f5">29</span><span class="eeeee4">30</span><span class="f5dbbb">31</span>
+        
+    </div>
+    
+    
+</body>
+</html>
