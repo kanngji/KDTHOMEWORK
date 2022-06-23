@@ -1,0 +1,77 @@
+body {
+  position: relative;
+  margin: 0;
+  height: 3000px;
+  background-image: url("https://mblogthumb-phinf.pstatic.net/20160127_177/krazymouse_1453865104404DjQIi_PNG/%C4%AB%C4%AB%BF%C0%C7%C1%B7%BB%C1%EE_%B6%F3%C0%CC%BE%F0.png?type=w2");
+  background-repeat: no-repeat;
+  /* 곰돌이 반복 제거 */
+  background-position: top right;
+  /* 라이언 오른쪽 위 고정 */
+  background-attachment: fixed;
+  /* 스크롤시 라이언 고정 */
+}
+.grad {
+  position: static;
+  left: 20px;
+  height: 3000px;
+  width: 100px;
+  background: linear-gradient(orange, black);
+}
+/* 그라데이션 div 세부 속성 */
+
+.flex-container-top {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 70px;
+  background-color: #f2d7d9;
+
+  /* position: absolute; */
+
+  justify-content: space-around;
+  align-items: center;
+}
+.top-item {
+  flex-basis: 150px;
+  width: 150px;
+  height: 50px;
+  border-radius: 30px;
+  font-weight: 700;
+  background-color: #d3cedf;
+
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 12px;
+}
+.flex-container-bottom {
+  bottom: 0;
+  position: fixed;
+  display: inline-flex;
+  width: 100%;
+  height: 70px;
+  background-color: #9cb4cc;
+  text-align: center;
+  align-items: center;
+}
+.bottom-item {
+  text-align: center;
+  box-sizing: border-box;
+  width: 150px;
+  height: 50px;
+  border-radius: 30px;
+  font-weight: 700;
+  background-color: #748da6;
+  flex-grow: 1;
+  padding-top: 12px;
+}
+.flex-container-bottom *:nth-child(4) {
+  flex-grow: 2;
+}
+/* 밑에 컨테이너 마지막 자식 flex grow 2 */
+
+.top-item:hover {
+  background-color: #cdf0ea;
+}
+.bottom-item:hover {
+  background-color: #faf4b7;
+}
