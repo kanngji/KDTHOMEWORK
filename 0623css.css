@@ -63,6 +63,8 @@ body {
   background-color: #748da6;
   flex-grow: 1;
   padding-top: 12px;
+  flex-basis: 0;
+  /* 맨 밑 추가자료 참조 */
 }
 .flex-container-bottom *:nth-child(4) {
   flex-grow: 2;
@@ -75,3 +77,12 @@ body {
 .bottom-item:hover {
   background-color: #faf4b7;
 }
+
+/* 아래 container 아이템(bottom-item)의 경우는 1:1:1:2 의 고정 
+비율로 해야하기 때문에 flex-basis 를 0으로 주셔야 합니다. */
+/* 화면이 큰 상황에서는 flex-grow 가 잘 먹어서 문제가 없지만, 
+화면이 작아지면 아래 사진 처럼 고정 비율이 깨지게 됩니다. 
+그 이유는 flex-basis 의 기본 속성 값이 auto 라서 컨텐츠 크기를
+ 기본으로 하기 때문인데 이를 0 값으로 넣어주면 컨텐츠 크기에 
+ 영향을 받지않고 flex-grow 로 설정한 비율로 
+ 고정되게 되니 참고하세요 */
