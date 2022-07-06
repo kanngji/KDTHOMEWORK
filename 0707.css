@@ -141,7 +141,8 @@ header .inner .header__btn .header__btn__require {
   height: 3000px;
   /* border: 1px solid #000; */
   position: fixed;
-  top: 64px;
+  /* top: 64px; */
+  padding-top: 64px;
   left: 0;
   /* display: flex; */
 }
@@ -191,6 +192,8 @@ header .inner .header__btn .header__btn__require {
 
 header .inner .header__menu .item:hover .dropdown {
   display: block;
+  width: 100%;
+  /* position: fixed; */
 }
 
 header .inner .header__menu .item:hover .dropdown > div {
