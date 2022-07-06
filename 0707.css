@@ -1,0 +1,202 @@
+/* COMMON */
+/* 눈누폰트 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+body {
+  font-size: 16px;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    Helvetica Neue, Segoe UI, Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic,
+    sans-serif;
+}
+
+/* a태그 불필요한 속성, 속성값 없애기 */
+a:link {
+  color: #58595b;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #58595b;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #58595b;
+  text-decoration: none;
+}
+
+a:active {
+  color: #58595b;
+  text-decoration: none;
+}
+
+/* HEADER */
+header {
+  background-color: #ab9dfe;
+  display: flex;
+  width: 100%;
+  position: fixed;
+}
+/* 헤더가 호버 되면 흰색바탕으로 변경 */
+header:hover {
+  background-color: #fff;
+}
+/* 헤더 호버시 로고에 있는 a태그 글자 검정색으로 바뀌기 */
+header:hover #logo a {
+  color: black;
+}
+header .inner {
+  position: relative;
+  width: 1400px;
+  height: 64px;
+  padding: 0 32px;
+  margin: 0 auto;
+  display: flex;
+}
+
+header .inner .header__logo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 32px;
+}
+
+/* logo의 alice 글자 변경하기 */
+header .inner .header__logo a {
+  font-size: 32px;
+  color: white;
+}
+
+/* HEADER MENU */
+header .inner .header__menu {
+  display: flex;
+  position: absolute;
+  margin: auto;
+  left: 200px;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+}
+
+header .inner .header__menu li {
+  padding: 8px 16px;
+}
+/* 메뉴안에 li 호버시 색깔 변경과 보더각 깍기 */
+header .inner .header__menu li:hover {
+  background-color: #f1f3f5;
+  border-radius: 5px;
+}
+header .inner .header__menu li a {
+  color: black;
+}
+/* 메뉴칸에 있는 화살표 띄우기 */
+header .inner .header__menu li i {
+  margin-left: 8px;
+  transition: 0.5s;
+}
+/* 메뉴칸에 있는거 호버시 화살표 돌리기 */
+header .inner .header__menu li a:hover > i {
+  transform: rotate(180deg);
+}
+
+/* HEADER BTN */
+header .inner .header__btn {
+  position: absolute;
+  right: 10px;
+  display: flex;
+  height: 32px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+header .inner .header__btn .header__btn__login {
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  margin-right: 8px;
+  /* border: 1px solid #000; */
+  background-color: #fff;
+  /* border: 1px solid #000; */
+}
+
+/* 호버시 밑줄효과 어렵게;;;(내가 구현할수있는 최선) */
+header .inner .header__btn .header__btn__login:hover {
+  border-bottom: 3px solid #000;
+  border-radius: 0px;
+}
+
+header .inner .header__btn .header__btn__require {
+  padding: 8px;
+  box-sizing: border-box;
+  background-color: #353a3f;
+  color: white;
+  border-radius: 3px;
+  border: 1px solid #000;
+}
+/* BEM 맞추려고했는데 모니터가 작아서 도저히 못참아서 .dropdown 부터 씀 */
+.dropdown {
+  display: none;
+  width: 100%;
+  height: 3000px;
+  /* border: 1px solid #000; */
+  position: fixed;
+  top: 64px;
+  left: 0;
+  /* display: flex; */
+}
+/* 3등분(서비스칸) 되서 클래스이름 three로 설정 display:flex 해서 칼럼 1,2,3 가로로 배치 */
+.dropdown > .three {
+  /* width: 33%; */
+  box-sizing: border-box;
+  display: flex;
+  /* border: 1px solid green; */
+}
+/* 칼럼 하나하나 크기 */
+.dropdown div ul {
+  padding: 20px;
+}
+/* 칼럼 주제 제목 */
+.dropdown .three div ul > p {
+  left: 40px;
+  position: relative;
+  /* border: 1px solid red; */
+}
+
+/* 아이콘 설정 */
+.dropdown div ul i {
+  font-size: 40px;
+  /* border: 1px solid yellow; */
+  margin-right: 20px;
+}
+/* 이모티콘 옆 제목 */
+.dropdown div ul li > div span {
+  font-size: 14px;
+  margin-bottom: 50px;
+  /* border: 1px solid blue; */
+}
+/* 이모티콘 옆 내용 */
+.dropdown div ul li > div p {
+  color: rgb(142, 131, 131);
+  /* border: 1px solid blue; */
+  display: block;
+  margin-top: 5px;
+}
+/* 칼럼 하나 리스트 요소 하나하나 */
+.dropdown ul > li {
+  display: flex;
+  /* border: 1px solid red; */
+  margin: 30px 0;
+}
+
+header .inner .header__menu .item:hover .dropdown {
+  display: block;
+}
+
+header .inner .header__menu .item:hover .dropdown > div {
+  /* border: 1px solid #000; */
+}
+
+header .inner .header__menu .item:hover .dropdown li {
+  /* position: relative; */
+}
