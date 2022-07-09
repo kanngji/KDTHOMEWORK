@@ -6,6 +6,7 @@ body {
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
     Helvetica Neue, Segoe UI, Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic,
     sans-serif;
+  height: 100vh;
 }
 
 /* a태그 불필요한 속성, 속성값 없애기 */
