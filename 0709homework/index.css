@@ -1,0 +1,894 @@
+/* common */
+body {
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  /* 배수값으로 하는게 정신건강에 좋음 */
+  line-height: 1.4;
+  font-family: "Nanum Gothic", sans-serif;
+  height: 3000px;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.inner {
+  width: 1100px;
+  position: relative;
+  margin: 0 auto;
+  /* border: 1px solid #000; */
+  /* height: 100%; */
+}
+.strong {
+  font-weight: 800;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 20px;
+  box-sizing: border-box;
+  border: 2px solid currentColor;
+
+  border-radius: 5px;
+}
+.btn--reverse {
+  background-color: #00704a;
+  border-color: #00704a;
+  color: white;
+}
+
+.btn--reverse:hover {
+  text-decoration: underline;
+}
+.btn--white {
+  border-color: white;
+  color: white;
+}
+.btn--white:hover {
+  text-decoration: underline;
+}
+
+.btn--light_green {
+  border-color: #00704a;
+  color: #00704a;
+  transition: 0.4s;
+}
+.btn--dark_green {
+  background-color: #1c3831;
+  color: white;
+}
+
+.btn--light_green:hover {
+  color: white;
+  background-color: #00704a;
+  text-decoration: underline;
+}
+/* header */
+header {
+  /* 제일 위에 고정시키기 */
+  top: 0;
+  width: 100%;
+  position: fixed;
+  background-color: #f6f5ef;
+  border-bottom: 1px solid #e4e5e5;
+  z-index: 1;
+}
+header > .inner {
+  height: 120px;
+  margin: 0 auto;
+  background-color: #f6f5ef;
+}
+header .inner .logo {
+  /* absolute 주면 문서 밖으로 */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto 0;
+  height: 75px;
+}
+header .inner .logo img {
+  display: block;
+}
+header .inner .sub_menu {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 50px;
+}
+header .inner .sub_menu .menu {
+  display: flex;
+}
+header .inner .sub_menu .menu li {
+  line-height: 32px;
+}
+header .inner .sub_menu .menu li a {
+  font-size: 12px;
+  color: #656565;
+  padding: 10px 15px;
+}
+header .inner .sub_menu .menu li a:hover {
+  text-decoration: underline;
+  /* position: relative; */
+}
+header .inner .sub_menu .menu li:not(:last-child)::after {
+  content: "|";
+  color: #656565;
+  opacity: 0.1;
+}
+/* 위와 동일 */
+/* header .inner .sub_menu .menu li:not(:last-child)::after {
+  content: "|";
+  content: "";
+  display: block;
+  width: 1px;
+  height: 12px;
+  font-size: 12px;
+  position: absolute;
+  background-color: #656565;
+  opacity: 0.1;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto 0;
+  color: #656565;
+  opacity: 0.1;
+} */
+header .inner .search {
+  height: 34px;
+  position: relative;
+}
+header .inner .search input {
+  width: 40px;
+  height: 34px;
+  transition: width 0.4s;
+  font-size: 16px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+header .inner .search input:focus {
+  width: 180px;
+  outline-color: green;
+}
+header .inner .search i {
+  position: absolute;
+  right: 3px;
+  font-size: 16px;
+  top: 0;
+  bottom: 0;
+  height: 16px;
+  margin: auto 0;
+}
+/* main menu */
+header .inner .main_menu {
+  display: flex;
+  position: absolute;
+  height: 66px;
+  top: 54px;
+  right: 0;
+}
+header .inner .main_menu .item {
+  /* padding: 10px 20px 34px 20px; */
+}
+/* item_contents로 마우스 가도 contents 보여야 하기 때문 */
+header .inner .main_menu .item:hover {
+  cursor: pointer;
+  background-color: #2c2a29;
+  color: #669900;
+  text-decoration: underline;
+}
+header .inner .main_menu .item .item__name {
+  font-size: 13px;
+  padding: 10px 20px 34px 20px;
+}
+header .inner .main_menu .item .item__contents {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  display: none;
+}
+header .inner .main_menu .item:hover .item__contents {
+  display: block;
+}
+header .inner .main_menu .item .item__contents .item__contents__menu {
+  background-color: #333;
+  width: 100%;
+  height: 400px;
+}
+header .inner .main_menu .item .item__contents .item__contents__additional {
+  background-image: url("./images/main_menu_pattern.jpg");
+  background-repeat: repeat;
+  width: 100%;
+  padding: 20px 0;
+}
+
+header .main_menu .item .item__contents .item__contents__menu {
+}
+header .main_menu .item .item__contents .item__contents__menu .inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+header .main_menu .item .item__contents .item__contents__menu .inner > li {
+  width: 220px;
+  /* border: 1px solid #000; */
+  padding: 5px;
+  /* padding: 0 20px 0 0; */
+  box-sizing: border-box;
+}
+
+header .main_menu .item .item__contents .item__contents__menu .inner > li > a {
+  color: white;
+  font-size: 14px;
+  display: block;
+  bottom: 0;
+  padding: 0 20px 0 0;
+}
+
+header
+  .main_menu
+  .item
+  .item__contents
+  .item__contents__menu
+  .inner
+  > li
+  > a:hover {
+  text-decoration: underline;
+}
+header
+  .main_menu
+  .item
+  .item__contents
+  .item__contents__menu
+  .inner
+  > li
+  > ul
+  > li {
+  color: #999;
+  font-size: 12px;
+  margin: 5px;
+}
+header
+  .main_menu
+  .item
+  .item__contents
+  .item__contents__menu
+  .inner
+  > li
+  > ul
+  > li:hover {
+  text-decoration: underline;
+}
+
+header
+  .inner
+  .main_menu
+  .item
+  .item__contents
+  .item__contents__additional
+  .inner {
+}
+header
+  .inner
+  .main_menu
+  .item
+  .item__contents
+  .item__contents__additional
+  .inner
+  > a {
+  display: block;
+  font-size: 12px;
+  color: #999;
+  text-decoration: none;
+  margin-top: 5px;
+}
+header
+  .inner
+  .main_menu
+  .item
+  .item__contents
+  .item__contents__additional
+  .inner
+  > p {
+  color: #669900;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* BADGES */
+header .badges {
+  position: absolute;
+  top: 150px;
+  right: 20px;
+}
+header .badges .badge {
+}
+header .badges .badge > a {
+}
+header .badges .badge > a > img {
+}
+
+/* VISUAL */
+.visual {
+  background-image: url("./images/visual_bg.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  /* height: 500px; */
+  margin-top: 120px;
+}
+
+.visual .inner {
+  position: relative;
+  height: 646px;
+}
+
+.visual .inner .slogan {
+  position: absolute;
+  top: 88px;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.visual .inner .slogan > img {
+}
+
+.visual .inner .slogan > .btn {
+  display: block;
+  border: 2px solid #1c3831;
+  width: 130px;
+  height: 38px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  color: #1c3831;
+  text-align: center;
+  /* 한줄일때 가장슂게 수직정렬하는방법 */
+  line-height: 38px;
+  color: #1c3831;
+  /* left: 0; */
+  margin-top: 30px;
+  text-decoration: none;
+  transition: 0.4s;
+  opacity: 0;
+}
+/* .visual .inner .slogan > .btn:hover {
+  background-color: green;
+  color: white;
+  text-decoration: underline;
+} */
+.visual .inner .image {
+  position: absolute;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.visual .inner .image.item_1 {
+  top: 88px;
+  width: 260px;
+  right: 210px;
+  /* border: 1px solid #000; */
+}
+
+.visual .inner .image.item_2 {
+  top: 200px;
+  width: 590px;
+  left: 30px;
+}
+
+.visual .inner .image.item_3 {
+  bottom: 50px;
+  width: 370px;
+  right: -120px;
+}
+
+.visual .inner:hover .image.item_1 {
+  transition-delay: 0.4s;
+  opacity: 1;
+}
+.visual .inner:hover .image.item_2 {
+  transition-delay: 0.8s;
+  opacity: 1;
+}
+
+.visual .inner:hover .image.item_3 {
+  transition-delay: 1.2s;
+  opacity: 1;
+}
+
+.visual .inner:hover .slogan {
+  opacity: 1;
+}
+
+.visual .inner:hover .slogan .btn {
+  transition-delay: 1.6s;
+}
+
+/* 7월 8일 시작 */
+
+/* NOTICE */
+.notice {
+}
+
+.notice .notice_line {
+  position: relative;
+}
+
+.notice .notice_line .bg_left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #111111;
+}
+.notice .notice_line .bg_right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #f6f5ef;
+}
+/* 고정 크기를 준다 */
+.notice .notice_line .inner {
+  height: 62px;
+  display: flex;
+  /* border: 1px solid; */
+}
+
+.notice .notice_line .inner .inner__left {
+  position: relative;
+  width: 60%;
+  height: 100%;
+  background-color: #111111;
+  display: flex;
+  /* 수직정렬을 편하게 */
+  align-items: center;
+  color: white;
+}
+
+.notice .notice_line .inner .inner__left h1 {
+  font-weight: bold;
+  position: absolute;
+  /* inner의 제일 옆에 붙어라 */
+  left: 0;
+}
+
+.notice .notice_line .inner .inner__left .swiper_container {
+  position: absolute;
+  left: 80px;
+  /* 남는 공간만큼 가져가겠다 */
+  flex-grow: 1;
+  font-size: 14px;
+}
+
+.notice .notice_line .inner .inner__left a {
+  position: absolute;
+  right: 20px;
+  color: white;
+}
+.notice .notice_line .inner .inner__left a span {
+  font-size: 36px;
+  vertical-align: bottom;
+}
+/* right 시작 */
+.notice .notice_line .inner .inner__right {
+  position: relative;
+  width: 40%;
+  height: 100%;
+  background-color: #f6f5ef;
+  display: flex;
+  /* 수직정렬을 편하게 */
+  align-items: center;
+  color: #111111;
+}
+
+.notice .notice_line .inner .inner__right h1 {
+  font-weight: bold;
+  position: absolute;
+  /* inner의 제일 옆에 붙어라 */
+  right: 120px;
+}
+
+.notice .notice_line .inner .inner__right a {
+  position: absolute;
+  right: 20px;
+  color: #111111;
+}
+.notice .notice_line .inner .inner__right a span {
+  font-size: 36px;
+  vertical-align: bottom;
+}
+
+/* REWARDS */
+.rewards {
+  background-color: #1e3932;
+}
+
+.rewards .inner {
+  /* inner안에 넣으니까 relative에 넣는다 */
+  /* position: relative; */
+  /* 패딩 위 아래만 싹싹 */
+  padding: 30px 0 40px 0;
+  display: flex;
+  /* flex 속성들 끼리 틈 넣기 */
+  gap: 20px;
+}
+
+.rewards .inner > a {
+}
+
+.rewards .inner > a > img {
+  width: 176px;
+  /* 아래 공간이 안뜬다고? */
+  display: block;
+}
+.rewards .inner .rewards__items {
+  flex-grow: 1;
+}
+
+.rewards .inner .rewards__items .rewards__items__register {
+  position: relative;
+  /* border-bottom: 1px solid #c8c8c8; */
+  /* 공간확보를 위해  */
+  padding-bottom: 12px;
+  /* 더얇은 줄을 위해 */
+  box-shadow: 0 0.5px #c8c8c8;
+}
+.rewards .inner .rewards__items .rewards__items__register p {
+  display: block;
+  font-size: 17px;
+  color: white;
+}
+.rewards .inner .rewards__items .rewards__items__register p.subject {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+.rewards .inner .rewards__items .rewards__items__register .buttons {
+  position: absolute;
+  right: 0;
+  bottom: 12px;
+}
+
+.rewards .inner .rewards__items .rewards__items__card {
+  position: relative;
+  padding-top: 20px;
+}
+.rewards .inner .rewards__items .rewards__items__card p {
+  font-size: 14px;
+  color: white;
+}
+
+.rewards .inner .rewards__items .rewards__items__card .buttons {
+  position: absolute;
+  right: 0;
+  /* 패딩값 20 만큼 더  */
+  top: 20px;
+}
+
+.peru {
+  position: relative;
+  background-image: url("../0709homework/images/peru_bg.jpg");
+  height: 570px;
+  /* overflowhidden 기본으로 깔고 추천 */
+  overflow: hidden;
+}
+.peru::before {
+  content: "";
+  /* 페루야 기준점이 되어라 */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  background-image: url("../0709homework/images/peru_bg_left.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* 호랑이사진 크기조절 */
+  width: 450px;
+  height: 450px;
+}
+.peru::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
+  background-image: url("../0709homework/images/peru_bg_right.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* 새 사진 크기조절 */
+  width: 300px;
+  height: 300px;
+}
+.peru .inner {
+  /* border: 1px solid #000; */
+  height: 100%;
+}
+
+.peru .inner .img_product {
+  display: block;
+  position: absolute;
+  width: 281px;
+  top: 130px;
+  left: 300px;
+  transform: translate(-500px, 0);
+  transition: 2.5s;
+  opacity: 0;
+}
+
+.peru .inner:active .img_product {
+  transform: translate(0px, 0);
+  opacity: 1;
+}
+
+.peru .inner .peru__contents {
+  position: absolute;
+  top: 160px;
+  right: 100px;
+  transform: translate(500px, 0);
+  transition: 2.5s;
+  opacity: 0;
+}
+.peru .inner:active .peru__contents {
+  transform: translate(0px, 0);
+  opacity: 1;
+}
+.peru .inner .peru__contents > img {
+  width: 427px;
+}
+
+.peru .inner .peru__contents .btn {
+  display: block;
+  width: 125px;
+  height: 38px;
+  margin-top: 40px;
+}
+/* indonesia */
+.indonesia {
+  position: relative;
+  background-image: url("../0709homework/images/indonesia_bg.jpg");
+  height: 400px;
+  overflow: hidden;
+}
+.indonesia::before {
+  content: "";
+  position: absolute;
+  background-image: url("../0709homework/images/indonesia_bg_left.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+
+  bottom: 0;
+  left: -200px;
+  width: 373px;
+  height: 277px;
+}
+.indonesia::after {
+  content: "";
+  position: absolute;
+  background-image: url("../0709homework/images/indonesia_bg_right.png");
+  display: block;
+  background-size: cover;
+  width: 563px;
+  height: 305px;
+  bottom: 0;
+  right: -300px;
+  /* border: 1px solid #000; */
+}
+.indonesia .inner {
+  /* position: relative; */
+  /* border: 1px solid #000; */
+}
+.indonesia .inner .indonesia__img {
+  position: absolute;
+  /* border: 1px solid #000; */
+  left: -300px;
+  background-repeat: no-repeat;
+  display: block;
+  /* right: -1px; */
+}
+.indonesia .inner .indonesia__title {
+  /* border: 1px solid #000; */
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 120px;
+  left: 80px;
+}
+.indonesia .inner .btn.btn--gold {
+  position: absolute;
+  top: 270px;
+  left: 250px;
+  border: 1px solid #000;
+}
+
+/* FAVORITE */
+
+.favorite {
+  background-image: url("../0709homework/images/fav_bg.jpg");
+  height: 800px;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
+}
+
+.favorite .inner {
+  position: relative;
+  /* active 효과 줄려고 */
+  height: 800px;
+}
+
+.favorite .inner .favorite__title_1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translate(-500px, 0);
+  transition: 2s;
+}
+.favorite .inner:active .favorite__title_1 {
+  transform: translate(0px, 0);
+  opacity: 1;
+}
+.favorite .inner .favorite__title_2 {
+  position: absolute;
+  top: 250px;
+  left: -100px;
+  /* border: 1px solid #000; */
+  opacity: 0;
+  transform: translate(-500px, 0);
+  transition: 2.5s;
+}
+.favorite .inner:active .favorite__title_2 {
+  transform: translate(0px, 0);
+  opacity: 1;
+}
+
+.favorite .inner .favorite__img {
+  position: absolute;
+  /* right: 0; */
+  top: 120px;
+  right: -120px;
+}
+.favorite .inner img {
+}
+
+.favorite .inner .btn.btn--white {
+  position: absolute;
+  /* border: 1px solid #000; */
+  top: 450px;
+  left: 130px;
+}
+
+/* MAGAZINE */
+.magazine {
+  position: relative;
+}
+.magazine .inner {
+}
+.magazine .inner .magazine_bg {
+  position: absolute;
+  left: -400px;
+  top: 0;
+  /* border: 1px solid #000; */
+}
+.magazine .inner .magazine_img {
+  position: absolute;
+  /* border: 1px solid #000; */
+  top: 0;
+  right: 10px;
+}
+.magazine .inner .magazine_title {
+  position: absolute;
+  top: 140px;
+}
+
+.magazine .inner .btn.btn--black {
+  position: absolute;
+  /* border: 1px solid #000; */
+  display: block;
+  top: 270px;
+  left: 300px;
+}
+
+/* STORE */
+.store {
+  position: relative;
+  background-image: url("./images/store_bg.jpg");
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-size: cover;
+  height: 400px;
+}
+.store .inner {
+}
+.store .inner .store_img_2 {
+  position: absolute;
+  /* visibility: hidden; */
+  /* border: 1px solid #000; */
+  left: 40px;
+}
+.store .inner .store_img_1 {
+  position: absolute;
+  top: 150px;
+  /* border: 1px solid #000; */
+  left: 300px;
+  /* z-index: 1; */
+}
+
+.store .inner .store_img_3 {
+  position: absolute;
+  /* visibility: hidden; */
+  /* border: 1px solid #000; */
+  left: 400px;
+  top: 0;
+}
+.store .inner .store_img_4 {
+  position: absolute;
+  /* visibility: hidden; */
+  right: 0;
+  top: 300px;
+}
+
+.store .inner .store_title_1 {
+  position: absolute;
+  /* border: 1px solid #000; */
+  top: 50px;
+  right: 0;
+}
+.store .inner .store_title_2 {
+  position: absolute;
+  top: 130px;
+  right: 20px;
+}
+
+.store .inner .btn.btn--black {
+  position: absolute;
+  top: 220px;
+  right: 280px;
+}
+
+footer {
+  position: relative;
+  height: 600px;
+  background-color: #2c2a29;
+  padding: 32px 0 35px;
+}
+footer .inner {
+}
+footer .inner .footer__top .footer__top__menu li {
+  list-style: none;
+}
+footer .inner .footer__top {
+}
+footer .inner .footer__top__menu {
+  display: flex;
+}
+footer .inner .footer__top .footer__top__menu li ul {
+  padding: 0 110px 0 0;
+}
+
+footer .inner .footer__top .footer__top__menu li ul p:hover,
+footer .inner .footer__top .footer__top__menu li ul a:hover {
+  text-decoration: underline;
+}
+
+footer .inner .footer__top .footer__top__menu li ul p {
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+footer .inner .footer__top .footer__top__menu li ul a {
+  font-size: 12px;
+  color: #ffffff;
+  font-weight: 100;
+}
