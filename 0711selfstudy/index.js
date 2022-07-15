@@ -34,10 +34,14 @@
 // }
 
 // 0~100 의 숫자 중에서 2또는 5의 배수 총합 구하기
-let sum = 0;
-for (let i = 0; i < 101; i++) {
-  if (i % 2 === 0 || i % 5 === 0) {
-    sum += i;
-  }
-}
-console.log(sum);
+// let sum = 0;
+// for (let i = 0; i < 101; i++) {
+//   if (i % 2 === 0 || i % 5 === 0) {
+//     sum += i;
+//   }
+// }
+// console.log(sum);
+
+let sum = 10;
+if (sum % 2 == 0) console.log("ok");
+if (sum % 5 == 0) console.log("이것도");
