@@ -136,13 +136,20 @@
 // console.log(apple.name);
 
 // 생성자 [함수]!!!
-function Kdt(name, gender) {
-  this.name = name;
-  this.gender = gender;
-  this.showInfo = function () {
-    console.log(`${this.name}이고 성별은 ${this.gender}입니다`);
-  };
-}
+// function Kdt(name, gender) {
+//   this.name = name;
+//   this.gender = gender;
+//   this.showInfo = function () {
+//     console.log(`${this.name}이고 성별은 ${this.gender}입니다`);
+//   };
+// }
 
-const jihoon = new Kdt("강지훈", "남자");
-jihoon.showInfo();
+// const jihoon = new Kdt("강지훈", "남자");
+// jihoon.showInfo();
+
+// DOM (Document Object Model)
+// html 문서 요소의집합
+// html 문서는 각각의 node와 object의 집합으로
+// 문서 표헌
+// 따라서 각각 node 또는 object에 접근하여 문서 구조/
+// 스타일/내용 등을 변경 할 수 있도록 하는 것!
