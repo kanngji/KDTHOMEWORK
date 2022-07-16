@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO-DO LIST</title>
+    <!-- 폰트어썸 cdn 적용 -->
+    <script
+      src="https://kit.fontawesome.com/ebe7817d95.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS파일 링크하기 -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- JS파일 링크하기 -->
+    <script defer src="./index.js"></script>
+  </head>
+  <body>
+    <h1>To Do List</h1>
+    <div class="container">
+      <!-- text입력창 만들기 -->
+      <input id="inputField" type="text" />
+      <!-- +버튼만들기 폰트어썸 사용 -->
+      <button id="addToDo"><i class="fa-solid fa-circle-plus"></i></button>
+      <!-- 할 일이 나타날 공간 만들기 -->
+      <div class="to-dos" id="toDoList"></div>
+    </div>
+  </body>
+</html>
