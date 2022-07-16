@@ -1,0 +1,10 @@
+button {
+  border-radius: 3px;
+  border: none;
+  padding: 4px;
+  color: red;
+}
+
+#add-button {
+  color: green;
+}
