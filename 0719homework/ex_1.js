@@ -37,9 +37,9 @@ function writeSchedule() {
 }
 console.log(targetDel);
 
-targetDel.addEventListener("click", function (e) {
-  //날짜가 p태그에 감싸져있었으니 p태그가 아니면 문자일거라는 생각
-  if (e.target.tagName !== "p") {
-    e.target.parentNode.remove();
-  }
-});
+// targetDel.addEventListener("click", function (e) {
+//   //날짜가 p태그에 감싸져있었으니 p태그가 아니면 문자일거라는 생각
+//   if (e.target.tagName !== "p") {
+//     e.target.parentNode.remove();
+//   }
+// });
