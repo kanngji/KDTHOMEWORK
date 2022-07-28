@@ -13,6 +13,7 @@ body {
   overflow: hidden;
   /* 맑은 날씨 배경 */
   background-color: #b1e1e2;
+  animation: sky linear 10s infinite;
 }
 
 section {
@@ -23,11 +24,11 @@ section {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
 }
 /* 해, 달을 움직이게 하기위해 po:r */
 section .sky {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 100%;
   height: 100%;
   position: relative;
@@ -42,6 +43,7 @@ section .sky .sun {
   margin-left: -90px;
   top: -130px;
   transform-origin: center 600px;
+  animation: sun linear 10s infinite;
 }
 
 section .sky .moon {
@@ -53,6 +55,7 @@ section .sky .moon {
   margin-left: -80px;
   top: -130px;
   transform-origin: center 600px;
+  animation: moon linear 10s infinite;
 }
 
 section .sky .cloud_1 {
@@ -62,6 +65,7 @@ section .sky .cloud_1 {
   /* 움직일 요소에만 % 하는것 같다 */
   left: 0%;
   top: -30px;
+  animation: cluoud_1 linear 10s infinite;
 }
 
 section .sky .cloud_2 {
@@ -69,6 +73,7 @@ section .sky .cloud_2 {
   width: 90px;
   left: 12%;
   top: 20px;
+  animation: cluoud_2 linear 7s infinite;
 }
 
 section .city {
@@ -79,4 +84,100 @@ section .city .city_img {
   position: absolute;
   bottom: 0;
   width: 1000px;
+}
+
+/* keyframes 설정하기 */
+@keyframes sky {
+  0% {
+    background-color: #636888;
+  }
+  25% {
+    background-color: #b1e1e2;
+  }
+  50% {
+    background-color: #fcd2e2;
+  }
+
+  75% {
+    background-color: #675577;
+  }
+
+  100% {
+    background-color: #636888;
+  }
+}
+
+@keyframes sun {
+  0% {
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+  25% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+
+  75% {
+    transform: rotate(180deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotate(270deg);
+    opacity: 0;
+  }
+}
+@keyframes moon {
+  0% {
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+  25% {
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+
+  75% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes cluoud_1 {
+  /* 같은 속성값 조정하기 left 줫으면 left 주기 right 주지말고 */
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes cluoud_2 {
+  /* 같은 속성값 조정하기 left 줫으면 left 주기 right 주지말고 */
+  0% {
+    left: 12%;
+  }
+  50% {
+    left: 112%;
+  }
+  100% {
+    left: 0;
+  }
 }
